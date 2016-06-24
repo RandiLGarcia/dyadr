@@ -1,0 +1,9 @@
+Package: dyadr
+Title: Actor-Partner Interdependence Model (APIM)
+Version: 0.0.0.9000
+Authors@R: person("Randi L.", "Garcia", email = "randigarcia@gmail.com")
+Description: This package runs a APIM model for indistinguishable dyads or distinguishable dayds.
+Depends: R (>= 3.2.3)
+License: Please acknowledge auhtor
+Encoding: UTF-8
+LazyData: true
