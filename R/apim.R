@@ -3,7 +3,7 @@
 #'
 #' will run the apim on indistinguishable dyads
 #' 
-#' even more stuff
+#' even more stuff about the apim
 #'
 #' @param x is a function
 #'
