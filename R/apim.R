@@ -1,7 +1,7 @@
 #' @name apim
 #' @title actor-partner interdependence model
 #'
-#' will run the apim on indistinguishable dyads
+#' will run the apim on indistinguishable dyads eventualy 
 #' 
 #' even more stuff about the apim
 #'
