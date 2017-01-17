@@ -5,7 +5,7 @@
 #' 
 #' even more stuff about the apim
 #'
-#' @param x is a function
+#' @param x is a function with form y ~ x.
 #'
 #' @details some additional details about these functions
 
