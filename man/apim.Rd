@@ -4,16 +4,15 @@
 \alias{apim}
 \title{actor-partner interdependence model
 
-will run the apim on indistinguishable dyads
+will run the apim on indistinguishable dyads eventualy 
 
 even more stuff about the apim}
 \usage{
 apim(x, dat, dyadid, option = "indistinguishable")
 }
 \arguments{
-\item{x}{is a function}
+\item{x}{is a function with form y ~ x.}
 }
 \details{
 some additional details about these functions
 }
-
