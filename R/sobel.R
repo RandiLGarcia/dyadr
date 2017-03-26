@@ -1,7 +1,7 @@
 #' @name sobel
 #' @title Soboel Method for Testing Idirect Effect
 #'
-#' The Sobel method is conservative. Use mmc, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated. 
+#' 
 #' 
 #' 
 #' @param a path from X to M.
@@ -9,7 +9,7 @@
 #' @param ase standard error for path a.
 #' @param bse standard error for path b.
 #'
-#' @details Could and maybe should output p value -- code available from last year
+#' @details The Sobel method is conservative. Use mmc, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated. 
 #' @export 
 #'
 sobel <- function(a, b, ase, bse){

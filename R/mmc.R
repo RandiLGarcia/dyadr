@@ -1,8 +1,5 @@
 #' @name mmc
 #' @title Monte Carlo confidence interval for the indirect effect
-#'
-#' Base code taken from Selig and Preacher (2008).
-#' 
 #' 
 #' @param a path from X to M.
 #' @param b path from M to Y.
@@ -13,7 +10,7 @@
 #' @param conf confidence level (defaults to 95).
 #' @param dig number of decimal places (defaults to 6)
 #'
-#' @details Could and maybe should output p value -- code available from last year
+#' @details Could and maybe should output p value -- code available from last year. Base code taken from Selig and Preacher (2008).
 #' @export 
 #'
 mmc<-function(a,b,ase,bse,cov = 0,rep = 40000,conf = 95, dig = 6) {

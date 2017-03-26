@@ -2,9 +2,7 @@
 % Please edit documentation in R/mmc.R
 \name{mmc}
 \alias{mmc}
-\title{Monte Carlo confidence interval for the indirect effect
-
-Base code taken from Selig and Preacher (2008).}
+\title{Monte Carlo confidence interval for the indirect effect}
 \usage{
 mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6)
 }
@@ -26,5 +24,5 @@ mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6)
 \item{dig}{number of decimal places (defaults to 6)}
 }
 \details{
-Could and maybe should output p value -- code available from last year
+Could and maybe should output p value -- code available from last year. Base code taken from Selig and Preacher (2008).
 }
