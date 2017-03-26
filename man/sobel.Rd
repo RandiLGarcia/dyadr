@@ -4,18 +4,18 @@
 \alias{sobel}
 \title{Soboel Method for Testing Idirect Effect
 
-The Sobel method is concervative. Use mmc, or bootstrapping if marginal.}
+The Sobel method is conservative. Use mmc, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated.}
 \usage{
-sobel(a, b, asesq, bsesq)
+sobel(a, b, ase, bse)
 }
 \arguments{
 \item{a}{path from X to M.}
 
 \item{b}{path from M to Y.}
 
-\item{asesq}{standard error for path a squared.}
+\item{ase}{standard error for path a.}
 
-\item{bsesq}{standard error for path b squared.}
+\item{bse}{standard error for path b.}
 }
 \details{
 Could and maybe should output p value -- code available from last year

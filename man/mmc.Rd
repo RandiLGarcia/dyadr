@@ -6,16 +6,16 @@
 
 Base code taken from Selig and Preacher (2008).}
 \usage{
-mmc(a, b, asesq, bsesq, cov = 0, rep = 40000, conf = 95, dig = 6)
+mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6)
 }
 \arguments{
 \item{a}{path from X to M.}
 
 \item{b}{path from M to Y.}
 
-\item{asesq}{standard error for path a squared.}
+\item{ase}{standard error for path a.}
 
-\item{bsesq}{standard error for path b squared.}
+\item{bse}{standard error for path b.}
 
 \item{cov}{covariance for a and b (set to zero in MLM, but could be free if using lavaan). Defaults to zero.}
 
