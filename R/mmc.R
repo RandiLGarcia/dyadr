@@ -1,5 +1,5 @@
 #' @name mmc
-#' @title Monte Carlo confidence interval for the indirect effect
+#' @title Monte Carlo confidence interval for indirect effects
 #' 
 #' @param a path from X to M.
 #' @param b path from M to Y.
