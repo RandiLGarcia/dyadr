@@ -10,6 +10,7 @@
 #' @export
 #'
 getevd = function (outp) {
+  vval=c(1,1)
   ppp =outp[1]$modelStruct[2]
   vval[2] = as.numeric(outp[6])
   vval[1] = vval[2]/attr(ppp$varStruct,"weights")[2]
