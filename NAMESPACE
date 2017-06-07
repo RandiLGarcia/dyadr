@@ -3,6 +3,7 @@
 export(apim)
 export(crsp)
 export(getevd)
+export(graphMod)
 export(lincomb)
 export(mmc)
 export(sobel)

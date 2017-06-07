@@ -6,10 +6,12 @@
 
 Get multiple R Squared}
 \usage{
-crsp(esdmod, esdemod)
+crsp(esdmod, esdemod, indistinguishable = TRUE)
 }
 \arguments{
-\item{esdmod}{is error standard devisiation of the model.}
+\item{esdmod}{is error standard deviation of the model of interest.}
+
+\item{esdemod}{is error standard deviation of the empty model.}
 }
 \details{
 some additional details about these functions

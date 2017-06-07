@@ -2,7 +2,7 @@
 % Please edit documentation in R/sobel.R
 \name{sobel}
 \alias{sobel}
-\title{Soboel Method for Testing Idirect Effect}
+\title{Sobel Method for Testing Idirect Effects}
 \usage{
 sobel(a, b, ase, bse)
 }
@@ -16,5 +16,5 @@ sobel(a, b, ase, bse)
 \item{bse}{standard error for path b.}
 }
 \details{
-The Sobel method is conservative. Use mmc, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated.
+The Sobel method is conservative. Use the mmc function, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated.
 }

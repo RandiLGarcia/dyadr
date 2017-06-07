@@ -2,7 +2,7 @@
 % Please edit documentation in R/mmc.R
 \name{mmc}
 \alias{mmc}
-\title{Monte Carlo confidence interval for the indirect effect}
+\title{Monte Carlo confidence interval for indirect effects}
 \usage{
 mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6)
 }
