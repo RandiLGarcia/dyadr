@@ -9,22 +9,24 @@
 #' @param lowMod  the model ran with LOW_mod.
 #' @param int coefficient position of the y-intercept.
 #' @param slp coefficient position of the slope of x.
+#' @param hlab text label for "high" level of moderator.
+#' @param llab text label for "low" level of moderator.
 #'
 #' @details This is function only works for numerical-numerical interactions. It returns a ggplot object.
 #' @export 
 #'
-graphMod <- function(data, x, y, mod, highMod, lowMod, int, slp){
+graphMod <- function(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High", llab = "Low"){
   require(dplyr)
   require(ggplot2)
   
   d <- data %>%
     mutate(mod = mod, xvar = x, yvar = y) %>%
     mutate(ModSplit = ifelse(mod >= mean(mod), 
-                             "High", "Low"))
+                             hlab, llab))
   
   cc <- data.frame(slope = c(coef(lowMod)[slp], coef(highMod)[slp]), 
                    intercept = c(coef(lowMod)[int], coef(highMod)[int]), 
-                   ModSplit = c("Low", "High"))
+                   ModSplit = c(llab, hlab))
   
   plot <- ggplot(d, aes(x = xvar, y = yvar)) +
     geom_point(aes(group = ModSplit, 

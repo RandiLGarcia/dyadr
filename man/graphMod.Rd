@@ -4,7 +4,8 @@
 \alias{graphMod}
 \title{Graph a Moderation Effect}
 \usage{
-graphMod(data, x, y, mod, highMod, lowMod, int, slp)
+graphMod(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High",
+  llab = "Low")
 }
 \arguments{
 \item{data}{the data.}
@@ -22,6 +23,10 @@ graphMod(data, x, y, mod, highMod, lowMod, int, slp)
 \item{int}{coefficient position of the y-intercept.}
 
 \item{slp}{coefficient position of the slope of x.}
+
+\item{hlab}{text label for "high" level of moderator.}
+
+\item{llab}{text label for "low" level of moderator.}
 }
 \details{
 This is function only works for numerical-numerical interactions. It returns a ggplot object.
