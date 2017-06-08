@@ -5,8 +5,8 @@
 #' @param x the x variable given as data$x.
 #' @param y the y variable given as data$y.
 #' @param mod the moderator given as data$mod.
-#' @param highMod  the model ran with HIGH_mod.
-#' @param lowMod  the model ran with LOW_mod.
+#' @param highMod  the model ran with HIGH_mod (can be gls or lme objects).
+#' @param lowMod  the model ran with LOW_mod (can be gls or lme objects).
 #' @param int coefficient position of the y-intercept.
 #' @param slp coefficient position of the slope of x.
 #' @param hlab text label for "high" level of moderator.
@@ -21,12 +21,22 @@ graphMod <- function(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High", 
   
   d <- data %>%
     mutate(mod = mod, xvar = x, yvar = y) %>%
+    select(mod, xvar, yvar) %>%
+    na.omit() %>%
     mutate(ModSplit = ifelse(mod >= mean(mod), 
                              hlab, llab))
   
-  cc <- data.frame(slope = c(coef(lowMod)[slp], coef(highMod)[slp]), 
-                   intercept = c(coef(lowMod)[int], coef(highMod)[int]), 
-                   ModSplit = c(llab, hlab))
+  if(class(highMod)=="gls"){
+    cc <- data.frame(slope = c(coef(lowMod)[slp], coef(highMod)[slp]), 
+                     intercept = c(coef(lowMod)[int], coef(highMod)[int]), 
+                     ModSplit = c(llab, hlab))
+  }
+  
+  if(class(highMod)=="lme"){
+    cc <- data.frame(slope = c(unlist(coef(lowMod)[slp])[1], unlist(coef(highMod)[slp])[1]), 
+                     intercept = c(unlist(coef(lowMod)[int])[1], unlist(coef(highMod)[int])[1]), 
+                     ModSplit = c(llab, hlab))
+  }
   
   plot <- ggplot(d, aes(x = xvar, y = yvar)) +
     geom_point(aes(group = ModSplit, 

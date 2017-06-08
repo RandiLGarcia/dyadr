@@ -16,9 +16,9 @@ graphMod(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High",
 
 \item{mod}{the moderator given as data$mod.}
 
-\item{highMod}{the model ran with HIGH_mod.}
+\item{highMod}{the model ran with HIGH_mod (can be gls or lme objects).}
 
-\item{lowMod}{the model ran with LOW_mod.}
+\item{lowMod}{the model ran with LOW_mod (can be gls or lme objects).}
 
 \item{int}{coefficient position of the y-intercept.}
 
