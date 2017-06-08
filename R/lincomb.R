@@ -4,7 +4,7 @@
 #' Test the sum (S), the average (A), or the difference (D) of two effects from the same model.
 #' 
 #'
-#' @param outp is the model object.
+#' @param outp is the summary of the model object. For exmaple, summary(mod).
 #' @param v1 is the number of the first effect.
 #' @param v2 is the number of the second effect.
 #' @param fun is the comparison. Default fun = "D". Other options include "S" the sum, and "A" the average.
