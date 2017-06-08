@@ -9,7 +9,7 @@ Test the sum (S), the average (A), or the difference (D) of two effects from the
 lincomb(outp, v1, v2, fun = "D")
 }
 \arguments{
-\item{outp}{is the summary of the model object. For exmaple, summary(mod).}
+\item{outp}{is the summary of the model object. For exmaple, summary(mod). It can be a gls or lme object.}
 
 \item{v1}{is the number of the first effect.}
 
