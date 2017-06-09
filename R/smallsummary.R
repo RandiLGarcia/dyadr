@@ -16,6 +16,14 @@ smallsummary <- function(outp){
   print(summary(outp)$modelStruct$varStruct)
   print(summary(outp)$tTable)
   
-  return(as.matrix(confintLME(outp))) 
+  if(class(outp) == "lme"){
+    CI <- confintLME(outp)
+  }
+  
+  if(class(outp) == "gls"){
+    CI <- confint(outp)
+  }
+  
+  return(as.matrix(CI)) 
   
 }
