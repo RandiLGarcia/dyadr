@@ -10,14 +10,8 @@ confintLME <- function(outp){
   
   rownames <- names(outp$coefficients$fixed)
   
-  CI <- data.frame()
-  
-  for(i in 1:length(rownames)){
-    CI_new <- unlist(confint(outp, parm = i))[1:2]
-    CI <- rbind(CI, CI_new)
-  }
-  
-  CI <- data.frame(CI, row.names = rownames)
+  CI <- data.frame(intervals(outp, which = "fixed")$fixed[c(1: length(rownames)),c(1,3)],
+                   row.names = rownames)
   
   names(CI) <- c("2.5%", "97.5%")
   
