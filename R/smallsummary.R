@@ -16,9 +16,9 @@ smallsummary <- function(outp){
   }
   
   if(class(outp) == "gls"){
-    print(round(summary(outp)$modelStruct$corStruct, 4))
+    print(summary(outp)$modelStruct$corStruct)
     cat("\n")
-    print(round(summary(outp)$modelStruct$varStruct, 4))
+    print(summary(outp)$modelStruct$varStruct)
     cat("Residual standard error:", summary(outp)$sigma, "\n")
     cat("\n")
     print(round(summary(outp)$tTable, 4))
