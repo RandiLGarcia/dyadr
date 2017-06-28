@@ -9,10 +9,10 @@
 smallsummary <- function(outp){
 
   if(class(outp) == "lme"){
-    print(summary(outp)$modelStruct$reStruct)
-    cat("\n")
+    print(summary(outp)$modelStruct$reStruct, sigma = summary(outp)$sigma)
     print(round(summary(outp)$tTable, 4))
-    CI <- confintLME(outp)
+    cat("\n")
+    CI <- round(confintLME(outp), 4)
   }
   
   if(class(outp) == "gls"){
