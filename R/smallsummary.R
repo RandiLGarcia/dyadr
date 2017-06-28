@@ -7,21 +7,23 @@
 #' @export 
 #'
 smallsummary <- function(outp){
-  
+
   if(class(outp) == "lme"){
     print(summary(outp)$modelStruct$reStruct)
-  }
-  
-  print(summary(outp)$modelStruct$corStruct)
-  print(summary(outp)$modelStruct$varStruct)
-  print(summary(outp)$tTable)
-  
-  if(class(outp) == "lme"){
+    cat("\n")
+    print(round(summary(outp)$tTable, 4))
     CI <- confintLME(outp)
   }
   
   if(class(outp) == "gls"){
-    CI <- confint(outp)
+    print(round(summary(outp)$modelStruct$corStruct, 4))
+    cat("\n")
+    print(round(summary(outp)$modelStruct$varStruct, 4))
+    cat("Residual standard error:", summary(outp)$sigma, "\n")
+    cat("\n")
+    print(round(summary(outp)$tTable, 4))
+    cat("\n")
+    CI <- round(confint(outp), 4)
   }
   
   return(as.matrix(CI)) 
