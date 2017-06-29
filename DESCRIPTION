@@ -1,5 +1,5 @@
 Package: dyadr
-Title: Actor-Partner Interdependence Model (APIM)
+Title: dyadr: Dyadic Data Analysis
 Version: 0.0.0.9000
 Authors@R: person("Randi L.", "Garcia", email = "randigarcia@gmail.com", role=(c("aut", "cre")))
 Description: This package runs a APIM model for indistinguishable dyads or
