@@ -4,12 +4,14 @@
 \alias{getevd}
 \title{Error standard deviation for distinguishable dyads
 
-Get error standard deviations from the distinguishable model}
+Get error standard deviations from the distinguishable model with gls}
 \usage{
-getevd(outp)
+getevd(outp, tipe = "gls", grp1 = "Group 1", grp2 = "Group 2")
 }
 \arguments{
-\item{outp}{is the model object.}
+\item{outp}{is the model object.  Not it is not the "summary" of that object.}
+
+\item{tipe}{is the type of model object.  It defaults to "gls."  The other option is "lme."}
 }
 \details{
 some additional details about these functions
