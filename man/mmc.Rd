@@ -4,7 +4,8 @@
 \alias{mmc}
 \title{Monte Carlo confidence interval for indirect effects}
 \usage{
-mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6)
+mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6,
+  seed = 12345)
 }
 \arguments{
 \item{a}{path from X to M.}
@@ -15,14 +16,16 @@ mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6)
 
 \item{bse}{standard error for path b.}
 
-\item{cov}{covariance for a and b (set to zero in MLM, but could be free if using lavaan). Defaults to zero.}
+\item{cov}{covariance for a and b (set to zero for MLM, but could be free if using lavaan). Defaults to zero.}
 
 \item{rep}{number of replications (defaults to 40,000).}
 
 \item{conf}{confidence level (defaults to 95).}
 
 \item{dig}{number of decimal places (defaults to 6)}
+
+\item{seed}{seed value (defaults to 12345)}
 }
 \details{
-Could and maybe should output p value -- code available from last year. Base code taken from Selig and Preacher (2008).
+Base code taken from Selig and Preacher (2008).
 }
