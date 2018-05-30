@@ -15,6 +15,9 @@ sobel(a, b, ase, bse)
 
 \item{bse}{standard error for path b.}
 }
+\description{
+Sobel Method for Testing Idirect Effects
+}
 \details{
 The Sobel method is conservative. Use the mmc function, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated.
 }

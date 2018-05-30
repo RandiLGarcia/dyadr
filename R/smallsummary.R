@@ -7,7 +7,7 @@
 #' @export 
 #'
 smallsummary <- function(outp){
-
+  
   if(class(outp) == "lme"){
     print(summary(outp)$modelStruct$reStruct, sigma = summary(outp)$sigma)
     print(round(summary(outp)$tTable, 4))
@@ -16,14 +16,35 @@ smallsummary <- function(outp){
   }
   
   if(class(outp) == "gls"){
+    
+    is.distinguishable <- function(mod){
+      require(stringr)
+      regexp_string <- "varIdent"
+      str_detect(as.character(mod$call)[5], regexp_string)
+    }
+    
+    if(is.distinguishable(outp)){
+      print(summary(outp)$modelStruct$corStruct)
+      cat("\n")
+      print(summary(outp)$modelStruct$varStruct)
+      cat("Residual standard error:", summary(outp)$sigma, "\n")
+      cat("\n")
+      print(round(summary(outp)$tTable, 4))
+      cat("\n")
+      
+      CI <- round(confint(outp), 4)
+      
+      return(as.matrix(CI)) 
+    }
+    
     print(summary(outp)$modelStruct$corStruct)
     cat("\n")
-    print(summary(outp)$modelStruct$varStruct)
     cat("Residual standard error:", summary(outp)$sigma, "\n")
     cat("\n")
     print(round(summary(outp)$tTable, 4))
     cat("\n")
     CI <- round(confint(outp), 4)
+    
   }
   
   return(as.matrix(CI)) 
