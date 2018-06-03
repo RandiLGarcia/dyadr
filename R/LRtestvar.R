@@ -8,7 +8,7 @@
 #' @details Example call: LRtestvar(dyadGC_full, "MTime").
 #' @export 
 #'
-ranTestLR <- function(outp, p, ctrl = defaultctrl){
+LRtestvar <- function(outp, p, ctrl = defaultctrl){
   require(stringr)
   require(stringi)
   

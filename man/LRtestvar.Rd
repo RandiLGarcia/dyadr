@@ -2,10 +2,9 @@
 % Please edit documentation in R/LRtestvar.R
 \name{LRtestvar}
 \alias{LRtestvar}
-\alias{ranTestLR}
 \title{Test the variance of a random effect}
 \usage{
-ranTestLR(outp, p, ctrl = defaultctrl)
+LRtestvar(outp, p, ctrl = defaultctrl)
 }
 \arguments{
 \item{outp}{the lme model object.}
