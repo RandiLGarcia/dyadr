@@ -28,9 +28,6 @@ graphMod(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High",
 
 \item{llab}{text label for "low" level of moderator.}
 }
-\description{
-Graph a Moderation Effect
-}
 \details{
 This is function only works for numerical-numerical interactions. It returns a ggplot object.
 }

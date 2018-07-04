@@ -26,9 +26,6 @@ mmc(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6,
 
 \item{seed}{seed value (defaults to 12345)}
 }
-\description{
-Monte Carlo confidence interval for indirect effects
-}
 \details{
 Base code taken from Selig and Preacher (2008).
 }

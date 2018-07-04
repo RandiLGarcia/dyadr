@@ -9,9 +9,6 @@ confintLME(outp)
 \arguments{
 \item{outp}{the lme moel object.}
 }
-\description{
-Confidence Intervals for LME Fixed Effects
-}
 \details{
 This function returns the confidence intervals in an organized fashion.
 }

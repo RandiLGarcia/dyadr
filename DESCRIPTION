@@ -3,13 +3,13 @@ Title: dyadr: Dyadic Data Analysis
 Version: 0.0.0.9000
 Authors@R: c(
   person("Randi", "Garcia", email = "rgarcia@smith.edu", role=(c("aut", "cre"))),
-  person("David", "Kenny", email = "david.kenny@uconn.edu", role = "aut"))
-Description: This package runs a APIM model for indistinguishable dyads or
-    distinguishable dayds.
+  person("David", "Kenny", email = "david.kenny@uconn.edu", role = "aut"),
+  person("Rutendo", "Madziwo", email = "rmadziwo@smith.edu", role = "ctb"))
+Description: This package provides helper functions for dyadic data analysis.
 Depends:
     R (>= 3.2.3),
     nlme, MASS
-License: Please acknowledge author
+License: Please acknowledge authors
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1.9000

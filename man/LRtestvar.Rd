@@ -13,9 +13,6 @@ LRtestvar(outp, p, ctrl = defaultctrl)
 
 \item{ctrl}{an lmeControl object. Defaults to msMaxIter=10000, MaxIter=100000, msMaxEval=10000, returnObject=TRUE, niterEM=10000, nlmStepMax=1000.}
 }
-\description{
-Test the variance of a random effect
-}
 \details{
 Example call: LRtestvar(dyadGC_full, "MTime").
 }

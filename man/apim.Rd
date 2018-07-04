@@ -13,13 +13,6 @@ apim(x, dat, dyadid, option = "indistinguishable")
 \arguments{
 \item{x}{is a function with form y ~ x.}
 }
-\description{
-actor-partner interdependence model
-
-will run the apim on indistinguishable dyads eventualy 
-
-even more stuff about the apim
-}
 \details{
 some additional details about these functions
 }

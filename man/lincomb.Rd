@@ -17,11 +17,6 @@ lincomb(outp, v1, v2, fun = "D")
 
 \item{fun}{is the comparison. Default fun = "D". Other options include "S" the sum, and "A" the average.}
 }
-\description{
-Tests of contrasts
-
-Test the sum (S), the average (A), or the difference (D) of two effects from the same model.
-}
 \details{
 some additional details about these functions
 }
