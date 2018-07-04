@@ -7,7 +7,6 @@
 #' @export 
 #'
 variable_view <- function(data){
-  require(dplyr)
   my.list = list()
   
   for (i in names(data)){
@@ -18,8 +17,10 @@ variable_view <- function(data){
     my.list[[i]] = label
   }
   
-  attributes = data.frame(matrix(unlist(my.list),ncol = 2,byrow = TRUE)) %>%
-    rename(variable = X1, label = X2)
+  attributes = data.frame(matrix(unlist(my.list),ncol = 2,byrow = TRUE)) 
+  
+  colnames(attributes)[1] <- "variable"
+  colnames(attributes)[2] <- "label"
   
   return(attributes)
 }
