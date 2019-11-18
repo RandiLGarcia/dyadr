@@ -13,6 +13,11 @@ getevd(outp, tipe = "gls", grp1 = "Group 1", grp2 = "Group 2")
 
 \item{tipe}{is the type of model object.  It defaults to "gls."  The other option is "lme."}
 }
+\description{
+Error standard deviation for distinguishable dyads
+
+Get error standard deviations from the distinguishable model with gls
+}
 \details{
 some additional details about these functions
 }

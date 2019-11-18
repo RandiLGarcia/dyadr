@@ -9,6 +9,9 @@ variable_view(data)
 \arguments{
 \item{data}{the lme model object.}
 }
+\description{
+Variable names with labels like in SPSS
+}
 \details{
 Example call: variable_view(acipair)
 }
