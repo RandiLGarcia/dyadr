@@ -21,7 +21,7 @@ graphMod <- function(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High", 
   
   d <- data %>%
     mutate(mod = mod, xvar = x, yvar = y) %>%
-    select(mod, xvar, yvar) %>%
+    dplyr::select(mod, xvar, yvar) %>%
     na.omit() %>%
     mutate(ModSplit = ifelse(mod >= mean(mod), 
                              hlab, llab))
