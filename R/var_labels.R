@@ -4,11 +4,11 @@
 #' @title var_labels
 #' @param data a data.frame
 var_labels <- function(data) {
-  if("data.frame" %in% class(data) == FALSE){
-    stop(paste0("data.frame expected."))
+  if(!is.data.frame(data)){
+    stop("data.frame expected.")
   }
   if(all(sjlabelled::get_label(data) == "")) {
-   stop(paste0("Data does not have any variable labels.")) 
+   stop("Data does not have any variable labels.") 
   }
   var_labels <- tibble::tibble(column_name = colnames(data),
                                variable_label = sjlabelled::get_label(data))
