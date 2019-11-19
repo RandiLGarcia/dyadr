@@ -33,6 +33,6 @@ data(alliance)
 }
 \references{
 Gibler, Douglas M. 2009. International military alliances, 1648-2008. CQ Press.  
-(\href{https://dmgibler.people.ua.edu/alliance-data.html})
+(\url{https://dmgibler.people.ua.edu/alliance-data.html})
 }
 \keyword{datasets}
