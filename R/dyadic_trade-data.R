@@ -24,7 +24,7 @@
 #' @keywords datasets
 #' 
 #' @references Correlates of War Version 3.0
-#' (\htef{http://www.correlatesofwar.org/data-sets/bilateral-trade})
+#' (\url{http://www.correlatesofwar.org/data-sets/bilateral-trade})
 #' 
 #' @examples
 #' data(dyadic_trade)
