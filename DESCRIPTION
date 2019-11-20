@@ -5,6 +5,7 @@ Authors@R: c(
   person("Randi", "Garcia", email = "rgarcia@smith.edu", role=(c("aut", "cre"))),
   person("David", "Kenny", email = "david.kenny@uconn.edu", role = "aut"),
   person("Rutendo", "Madziwo", email = "rmadziwo@smith.edu", role = "ctb"),
+  person("Emma", "Livingston", email = "livingston.emma73@gmail.com", role = "ctb"))
   person("Sifan", "Liu", email = "cliu13@smith.edu", role = "ctb"))
 Description: This package provides helper functions for dyadic data analysis.
 Depends:
@@ -13,4 +14,12 @@ Depends:
 License: CC0
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+    tibble,
+    dplyr,
+    hablar,
+    sjlabelled
+Suggests: 
+    testthat
 RoxygenNote: 7.0.0
