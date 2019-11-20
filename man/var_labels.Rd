@@ -10,5 +10,6 @@ var_labels(data)
 \item{data}{a data.frame}
 }
 \description{
-var_labels
+Creates a `tbl_df` that contains the column names and variable labels to
+easily explore the data.
 }

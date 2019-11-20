@@ -22,20 +22,19 @@ counts_labels <- function(data, x) {
   }
   dims <- dim(data)
   counts <- data %>%
-    dplyr::select(x) %>%
+    dplyr::select_(x) %>%
     group_by_(x) %>%
     count_()
-  labels <- tibble::tibble(variable_label = 
+  labels <- tibble::tibble(value_labels = 
                      get_labels(data[[x]]))
   labels <- rownames_to_column(labels, var = "rn")
   labels$rn <- as.numeric(labels[["rn"]])
   names(counts)[1] <- "x"
   x_bins <- counts %>%
     right_join(labels, by = c("x" = "rn"))
-  names(x_bins)[1] <- c(x, "n", "variable_label")
+  names(x_bins)[1] <- c(x, "n", "value_labels")
   x_bins[["n"]][is.na(x_bins[["n"]])] <- 0
   x_bins <- x_bins %>%
-    mutate(percent = round((n / dims[[1]]) * 100)) %>%
-    select(1, variable_label, everything())
+    mutate(percent = round((n / dims[[1]]) * 100))
   return(x_bins)
 }
