@@ -30,6 +30,6 @@ data(dyadic_trade)
 }
 \references{
 Correlates of War Version 3.0
-(\htef{http://www.correlatesofwar.org/data-sets/bilateral-trade})
+(\url{http://www.correlatesofwar.org/data-sets/bilateral-trade})
 }
 \keyword{datasets}
