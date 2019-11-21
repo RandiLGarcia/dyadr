@@ -13,6 +13,11 @@ crsp(esdmod, esdemod, indistinguishable = TRUE)
 
 \item{esdemod}{is error standard deviation of the empty model.}
 }
+\description{
+Multiple Pseudo R-squared
+
+Get multiple R Squared
+}
 \details{
 some additional details about these functions
 }
