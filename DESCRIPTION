@@ -18,11 +18,11 @@ Imports:
     dplyr,
     hablar,
     sjlabelled,
+    nlme,
+    MASS,
     stringr,
     stringi,
-    stats,
-    MASS,
-    nlme
+    stats
 Suggests: 
     testthat
 RoxygenNote: 7.0.2
