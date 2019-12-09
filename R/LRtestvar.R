@@ -4,14 +4,13 @@
 #' @param outp the lme model object.
 #' @param p string variable that you want to test the random variance component for.
 #' @param ctrl an lmeControl object. Defaults to msMaxIter=10000, MaxIter=100000, msMaxEval=10000, returnObject=TRUE, niterEM=10000, nlmStepMax=1000.
-#'
+#' @import stringr
+#' @import stats
+#' @ImportFrom stringi stri_length
 #' @details Example call: LRtestvar(dyadGC_full, "MTime").
 #' @export 
 #'
 LRtestvar <- function(outp, p, ctrl = defaultctrl){
-  require(stringr)
-  require(stringi)
-  
   defaultctrl <- lmeControl(msMaxIter=10000,
                             MaxIter=100000,
                             msMaxEval=10000,

@@ -23,7 +23,7 @@ counts_labels <- function(data, x) {
   }
   dims <- dim(data)
   counts <- data %>%
-    dplyr::select_(x) %>%
+    select_(x) %>%
     group_by_(x) %>%
     count_()
   labels <- tibble::tibble(value_labels = 
