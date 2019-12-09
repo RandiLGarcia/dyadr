@@ -18,7 +18,6 @@ smallsummary <- function(outp){
   if(class(outp) == "gls"){
     
     is.distinguishable <- function(mod){
-      require(stringr)
       regexp_string <- "varIdent"
       str_detect(as.character(mod$call)[5], regexp_string)
     }

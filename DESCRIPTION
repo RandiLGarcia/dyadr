@@ -10,7 +10,7 @@ Authors@R: c(
 Description: This package provides helper functions for dyadic data analysis.
 Depends:
     R (>= 3.2.3),
-    nlme, MASS
+    MASS, nlme
 License: CC0
 Encoding: UTF-8
 LazyData: true
@@ -18,7 +18,9 @@ Imports:
     tibble,
     dplyr,
     hablar,
-    sjlabelled
+    sjlabelled,
+    stringr,
+    stringi
 Suggests: 
     testthat
-RoxygenNote: 7.0.0
+RoxygenNote: 7.0.2
