@@ -5,16 +5,17 @@
 #' @param data a data.frame
 #' @param x a column in 'data'. Must be a string.
 #' @import dplyr
+#' @import hablar
 counts_labels <- function(data, x) {
   if(!is.data.frame(data)) {
     stop("data.frame expected.")
   }
   if(is.factor(data[[x]])) {
-    data[[x]] <- hablar::convert_num(data[[x]])
+    data[[x]] <- convert_num(data[[x]])
     cat("Factor converted to numeric.")
   }
   if(is.character(data[[x]])) {
-    data[[x]] <- hablar::convert_num(data[[x]])
+    data[[x]] <- convert_num(data[[x]])
     cat("Factor converted to numeric.")
   }
   if(is.null(sjlabelled::get_labels(data[[x]]))) {
@@ -38,3 +39,5 @@ counts_labels <- function(data, x) {
     mutate(percent = round((n / dims[[1]]) * 100))
   return(x_bins)
 }
+
+globalVariables(c("convert_num","get_labels","rownames_to_column"))

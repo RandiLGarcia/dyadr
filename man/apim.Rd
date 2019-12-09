@@ -12,6 +12,12 @@ apim(x, dat, dyadid, option = "indistinguishable")
 }
 \arguments{
 \item{x}{is a function with form y ~ x.}
+
+\item{dat}{is a dataset.}
+
+\item{dyadid}{is a dyad in a dataset.}
+
+\item{option}{is to see whether variables are indistinguishable}
 }
 \description{
 actor-partner interdependence model
