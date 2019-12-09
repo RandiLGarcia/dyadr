@@ -9,8 +9,7 @@ Authors@R: c(
   person("Sifan", "Liu", email = "cliu13@smith.edu", role = "ctb"))
 Description: This package provides helper functions for dyadic data analysis.
 Depends:
-    R (>= 3.2.3),
-    MASS, nlme
+    R (>= 3.2.3)
 License: CC0
 Encoding: UTF-8
 LazyData: true
@@ -21,7 +20,9 @@ Imports:
     sjlabelled,
     stringr,
     stringi,
-    stats
+    stats,
+    MASS,
+    nlme
 Suggests: 
     testthat
 RoxygenNote: 7.0.2
