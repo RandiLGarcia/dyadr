@@ -6,6 +6,7 @@
 #'
 #' @param esdmod is error standard deviation of the model of interest.
 #' @param esdemod is error standard deviation of the empty model.
+#' @param indistinguishable is to check whether...
 #' 
 #'
 #' @details some additional details about these functions
@@ -24,4 +25,4 @@ crsp = function (esdmod, esdemod, indistinguishable = TRUE) {
   #   return(rsq)
   # }
   # 
-  }
+}

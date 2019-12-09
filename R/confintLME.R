@@ -17,3 +17,5 @@ confintLME <- function(outp){
   
   return(CI)
 }
+
+globalVariables(c("intervals"))
