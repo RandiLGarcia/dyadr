@@ -20,7 +20,8 @@ Imports:
     hablar,
     sjlabelled,
     stringr,
-    stringi
+    stringi,
+    stats
 Suggests: 
     testthat
 RoxygenNote: 7.0.2
