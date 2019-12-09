@@ -21,11 +21,11 @@ Imports:
     sjlabelled,
     nlme,
     MASS,
-    ggplot2,
-    lazyeval, 
     stringr,
     stringi,
-    stats
+    stats,
+    ggplot2,
+    lazyeval
 Suggests: 
     testthat
 VignetteBuilder: utils
