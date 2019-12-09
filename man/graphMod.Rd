@@ -4,18 +4,8 @@
 \alias{graphMod}
 \title{Graph a Moderation Effect}
 \usage{
-graphMod(
-  data,
-  x,
-  y,
-  mod,
-  highMod,
-  lowMod,
-  int,
-  slp,
-  hlab = "High",
-  llab = "Low"
-)
+graphMod(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High",
+  llab = "Low")
 }
 \arguments{
 \item{data}{the data.}
