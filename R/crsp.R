@@ -6,7 +6,7 @@
 #'
 #' @param esdmod is error standard deviation of the model of interest.
 #' @param esdemod is error standard deviation of the empty model.
-#' @param indistinguishable is to check whether...
+#' @param indistinguishable is to check whether the dyad is indistinguishable or not.
 #' 
 #'
 #' @details some additional details about these functions

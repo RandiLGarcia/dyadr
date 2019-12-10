@@ -1,20 +1,44 @@
 ---
 title: "dyadr_vignette"
-date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{dyadr_vignette}
-  %\VignetteEncoding{UTF-8}{inputenc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = "README-"
 )
-```
-
-```{r setup}
 library(dyadr)
 ```
+
+# dyadyr
+
+dyadr is an R package for dyadic data analysis.
+
+## Installation
+
+How to install the latest version of dyadr package from github:
+
+```{r, eval = FALSE}
+install.packages("remotes")
+remotes::install_github("RandiLGarcia/dyadr")
+
+```
+
+## Usage 
+
+
+
+
+
+
+
+
+
+
+

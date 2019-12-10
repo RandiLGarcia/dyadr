@@ -83,3 +83,5 @@ LRtestvar <- function(outp, p, ctrl = defaultctrl){
                     df = 1,
                     p_value = pvalCorrected(as.numeric(fff), 1)))
 }
+
+globalVariables(c("lmeControl","pdBlocked","varIdent","stri_length"))

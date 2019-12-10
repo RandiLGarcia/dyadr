@@ -6,7 +6,7 @@
 #'
 #' @param outp is the model object.  Not it is not the "summary" of that object.
 #' @param tipe is the type of model object.  It defaults to "gls."  The other option is "lme."
-#' @param grp1 is the group 1 of the model object.(?)
+#' @param grp1 is the dataframe the model object.(?)
 #' @param grp2 is the group 2 of the model object.(?)
 #'
 #' @details some additional details about these functions
