@@ -92,3 +92,5 @@ testvar <- function(ovar, xx, yy, dset, DID, obs, dvv, ctrl = defaultctrl){
   return(vvxx)
   
 }
+
+globalVariables(c("lme"))

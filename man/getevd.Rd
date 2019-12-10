@@ -13,7 +13,7 @@ getevd(outp, tipe = "gls", grp1 = "Group 1", grp2 = "Group 2")
 
 \item{tipe}{is the type of model object.  It defaults to "gls."  The other option is "lme."}
 
-\item{grp1}{is the group 1 of the model object.(?)}
+\item{grp1}{is the dataframe the model object.(?)}
 
 \item{grp2}{is the group 2 of the model object.(?)}
 }

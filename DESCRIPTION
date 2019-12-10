@@ -25,7 +25,10 @@ Imports:
     stringi,
     stats,
     ggplot2,
-    lazyeval
+    lazyeval,
+    qtl
 Suggests: 
-    testthat
-VignetteBuilder: utils
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

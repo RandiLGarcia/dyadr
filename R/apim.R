@@ -6,10 +6,7 @@
 #' even more stuff about the apim
 #'
 #' @param x is a function with form y ~ x.
-#' @param dat is a dataset.
-#' @param dyadid is a dyad in a dataset.(?)
-#' @param option is to see whether variables are indistinguishable(?)
-#'
+#' 
 #' @details some additional details about these functions
 #' @import lazyeval
 

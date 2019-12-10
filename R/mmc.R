@@ -16,7 +16,7 @@
 #' @export 
 #'
 mmc<-function(a,b,ase,bse,cov = 0,rep = 40000,conf = 95, dig = 6, seed=12345) {
-  require(MASS)
+  
   
   pest <- c(a,b)
   
