@@ -9,8 +9,8 @@ An R package for assisting people in dyadic data analysis. Contains functions to
 
 # Installation
 ```
-install.packages("remotes")
-remotes::install_github("RandiLGarcia/dyadr")
+install.packages("devtools")
+devtools::install_github("RandiLGarcia/dyadr")
 ```
 
 # Usage
