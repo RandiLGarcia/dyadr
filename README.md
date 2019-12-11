@@ -1,6 +1,5 @@
-[![Travis-CI Build Status](https://api.travis-ci.org/abarylsky/dyadr.svg?branch=master)](https://travis-ci.org/abarylsky/dyadr)
-
 # dyadr
+[![Travis-CI Build Status](https://api.travis-ci.org/abarylsky/dyadr.svg?branch=master)](https://travis-ci.org/abarylsky/dyadr)
 r package for dyadic data analysis
 
 # Description
