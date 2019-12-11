@@ -10,7 +10,7 @@ An R package for assisting people in dyadic data analysis. Contains functions to
 # Installation
 ```
 install.packages("remotes")
-remotes::install_githib("RandiLGarcia/dyadr")
+remotes::install_github("RandiLGarcia/dyadr")
 ```
 
 # Usage
