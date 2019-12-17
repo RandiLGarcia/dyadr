@@ -13,7 +13,72 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
+
+```
+
+
+# Examples
+
+Here is an example of how to use some of the `dyadr` functions.
+
+```{r}
+library(nlme)
 library(dyadr)
+
+```
+
+Using the `apim` function
+```{r}
+apim("x")
+
+testthat::expect_message(apim("x"), "please enter a formula")
+```
+
+Using the `confintLME` function
+```{r}
+
+
+```
+
+```{r}
+counts_labels(acipair, Gender_A)
+
+
+```
+
+
+Using the `crsp` function
+
+```{r}
+# Empty Model
+        apimie = summary(gls(Satisfaction_A ~ 1, 
+                     na.action=na.omit, 
+                     correlation=corCompSymm (form=~1|CoupleID),
+                     data=acipair))
+# sd of errors for the model or esd
+        esd = as.numeric(apim[6])
+# sd of errors for the empty model or esd0
+                esd0 = as.numeric(apimie[6])
+# the R squared, using the crsp function                
+        crsp (esd,esd0)
+        
+testthat::expect_gt(crsp(esd,esd0),0.3348468)
+
+```
+
+Using the `smallsummary` function
+
+```{r}
+apim = gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
+                 na.action=na.omit, 
+                 correlation=corCompSymm (form=~1|CoupleID),
+                 data=acipair)
+
+smallsummary(apim)
+
+
+testthat::expect_equal_to_reference(smallsummary(apim), "p-value")
+
 ```
 
 
@@ -21,8 +86,9 @@ library(dyadr)
 
 
 
+Using the `mmc` function
 
 
-
+Using the `graphMod` function
 
 
