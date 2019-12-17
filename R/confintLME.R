@@ -1,7 +1,7 @@
 #' @name confintLME
 #' @title Confidence Intervals for LME Fixed Effects
 #' 
-#' @param outp the lme moel object.
+#' @param outp the lme model object.
 #'
 #' @details This function returns the confidence intervals in an organized fashion.
 #' @export 
