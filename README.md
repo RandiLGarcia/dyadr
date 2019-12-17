@@ -28,32 +28,63 @@ Here is an example of how to use some of the `dyadr` functions.
 
 First, load the package and get data:
 
-    library(nlme)
-    library(dyadr)
-    riggsp <- read.csv("riggsp.csv") 
+``` r
+library(nlme)
+library(dyadr)
+#> Warning: replacing previous import 'MASS::select' by 'dplyr::select' when
+#> loading 'dyadr'
+#> Warning: replacing previous import 'dplyr::na_if' by 'hablar::na_if' when
+#> loading 'dyadr'
+#> Warning: replacing previous import 'hablar::convert' by 'qtl::convert' when
+#> loading 'dyadr'
+#> Warning: replacing previous import 'dplyr::filter' by 'stats::filter' when
+#> loading 'dyadr'
+#> Warning: replacing previous import 'dplyr::lag' by 'stats::lag' when loading
+#> 'dyadr'
+data(acipair)
+```
 
 Using the `smallsummary` function
 
-    apim = gls(Sat_A ~ Anxiety_A + Anxiety_P, 
-                     na.action=na.omit, 
-                     correlation=corCompSymm (form=~1|Dyad),
-                     data=riggsp)
-    
-    smallsummary(apim)
+``` r
+apim = gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
+                 na.action=na.omit, 
+                 correlation=corCompSymm (form=~1|CoupleID),
+                 data=acipair)
+
+smallsummary(apim)
+#> Correlation structure of class corCompSymm representing
+#>       Rho 
+#> 0.4715039 
+#> 
+#> Residual standard error: 0.4052903 
+#> 
+#>               Value Std.Error  t-value p-value
+#> (Intercept)  4.7190    0.2366  19.9475  0.0000
+#> Tension_A   -0.3454    0.0329 -10.5032  0.0000
+#> SelfPos_P   -0.0656    0.0516  -1.2716  0.2045
+#>               2.5 %  97.5 %
+#> (Intercept)  4.2553  5.1827
+#> Tension_A   -0.4099 -0.2810
+#> SelfPos_P   -0.1667  0.0355
+```
 
 Using the `crsp` function
 
-    # Empty Model
-            apimie = summary(gls(Sat_A ~ 1, 
-                         na.action=na.omit, 
-                         correlation=corCompSymm (form=~1|Dyad),
-                         data=riggsp))
-    # sd of errors for the model or esd
-            esd = as.numeric(apim[6])
-    # sd of errors for the empty model or esd0
-                    esd0 = as.numeric(apimie[6])
-    # the R squared, using the crsp function                
-            crsp (esd,esd0)
+``` r
+# Empty Model
+        apimie = summary(gls(Satisfaction_A ~ 1, 
+                     na.action=na.omit, 
+                     correlation=corCompSymm (form=~1|CoupleID),
+                     data=acipair))
+# sd of errors for the model or esd
+        esd = as.numeric(apim[6])
+# sd of errors for the empty model or esd0
+                esd0 = as.numeric(apimie[6])
+# the R squared, using the crsp function                
+        crsp (esd,esd0)
+#> [1] 0.3348468
+```
 
 # Contributing
 
