@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^alliance.RData$
 ^\.travis\.yml$
+^README\.Rmd$

@@ -1,0 +1,30 @@
+---
+title: "README"
+output: html_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+library(dyadr)
+```
+
+# dyadyr
+
+dyadr is an R package for dyadic data analysis.
+
+## Installation
+
+How to install the latest version of dyadr package from github:
+
+```{r, eval = FALSE}
+install.packages("remotes")
+remotes::install_github("RandiLGarcia/dyadr")
+
+```
+
+## Usage 
+
