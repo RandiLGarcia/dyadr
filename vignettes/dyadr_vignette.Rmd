@@ -31,21 +31,7 @@ Using the `apim` function
 ```{r}
 apim("x")
 
-testthat::expect_message(apim("x"), "please enter a formula")
 ```
-
-Using the `confintLME` function
-```{r}
-
-
-```
-
-```{r}
-counts_labels(acipair, Gender_A)
-
-
-```
-
 
 Using the `crsp` function
 
@@ -61,8 +47,6 @@ Using the `crsp` function
                 esd0 = as.numeric(apimie[6])
 # the R squared, using the crsp function                
         crsp (esd,esd0)
-        
-testthat::expect_gt(crsp(esd,esd0),0.3348468)
 
 ```
 
@@ -77,7 +61,13 @@ apim = gls(Satisfaction_A ~ Tension_A + SelfPos_P,
 smallsummary(apim)
 
 
-testthat::expect_equal_to_reference(smallsummary(apim), "p-value")
+```
+
+
+
+Using the `var_labels` function
+```{r}
+var_labels(data=iris)
 
 ```
 
@@ -86,9 +76,7 @@ testthat::expect_equal_to_reference(smallsummary(apim), "p-value")
 
 
 
-Using the `mmc` function
 
 
-Using the `graphMod` function
 
 
