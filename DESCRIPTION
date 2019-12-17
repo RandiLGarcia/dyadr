@@ -6,7 +6,9 @@ Authors@R: c(
   person("David", "Kenny", email = "david.kenny@uconn.edu", role = "aut"),
   person("Rutendo", "Madziwo", email = "rmadziwo@smith.edu", role = "ctb"),
   person("Emma", "Livingston", email = "livingston.emma73@gmail.com", role = "ctb"),
-  person("Sifan", "Liu", email = "cliu13@smith.edu", role = "ctb"))
+  person("Sifan", "Liu", email = "cliu13@smith.edu", role = "ctb"),
+  person("Alina", "Barylsky", email = "abarylsky@gmail.com", role = "ctb"),
+  person("Jane", "Bang", email = "carolbjy@gmail.com", role = "ctb"))
 Description: This package provides helper functions for dyadic data analysis.
 Depends:
     R (>= 3.2.3)
