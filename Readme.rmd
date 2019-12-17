@@ -33,7 +33,7 @@ devtools::install_github("RandiLGarcia/dyadr")
 Here is an example of how to use some of the `dyadr` functions.
 
 First, load the package and get data:
-```{r}
+```{r, warning = FALSE}
 library(nlme)
 library(dyadr)
 data(acipair)

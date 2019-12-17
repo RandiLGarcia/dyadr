@@ -31,16 +31,6 @@ First, load the package and get data:
 ``` r
 library(nlme)
 library(dyadr)
-#> Warning: replacing previous import 'MASS::select' by 'dplyr::select' when
-#> loading 'dyadr'
-#> Warning: replacing previous import 'dplyr::na_if' by 'hablar::na_if' when
-#> loading 'dyadr'
-#> Warning: replacing previous import 'hablar::convert' by 'qtl::convert' when
-#> loading 'dyadr'
-#> Warning: replacing previous import 'dplyr::filter' by 'stats::filter' when
-#> loading 'dyadr'
-#> Warning: replacing previous import 'dplyr::lag' by 'stats::lag' when loading
-#> 'dyadr'
 data(acipair)
 ```
 
