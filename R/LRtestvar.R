@@ -7,8 +7,7 @@
 #' @import stringr
 #' @import stats
 #' @importFrom stringi stri_length
-#' @examples 
-#' LRtestvar(dyadGC_full, "MTime")
+#' @details LRtestvar(dyadGC_full, "MTime")
 #' @export 
 #' 
 LRtestvar <- function(outp, p, ctrl = defaultctrl){
