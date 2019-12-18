@@ -7,7 +7,7 @@
 confintLME(outp)
 }
 \arguments{
-\item{outp}{the lme moel object.}
+\item{outp}{the lme model object.}
 }
 \description{
 Confidence Intervals for LME Fixed Effects
