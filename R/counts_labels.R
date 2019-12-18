@@ -11,11 +11,11 @@ counts_labels <- function(data, x) {
     stop("data.frame expected.")
   }
   if(is.factor(data[[x]])) {
-    data[[x]] <- convert_num(data[[x]])
+    data[[x]] <- as.numeric(data[[x]])
     cat("Factor converted to numeric.")
   }
   if(is.character(data[[x]])) {
-    data[[x]] <- convert_num(data[[x]])
+    data[[x]] <- as.numeric(data[[x]])
     cat("Factor converted to numeric.")
   }
   if(is.null(sjlabelled::get_labels(data[[x]]))) {
@@ -40,4 +40,4 @@ counts_labels <- function(data, x) {
   return(x_bins)
 }
 
-globalVariables(c("convert_num","get_labels","rownames_to_column"))
+globalVariables(c("get_labels","rownames_to_column"))

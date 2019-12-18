@@ -17,7 +17,7 @@ apim(x, dat, dyadid, option = "indistinguishable")
 
 \item{dyadid}{is a dyadic variable.}
 
-\item{option}{is to check whether the variables in dataframe is indistingusihable.}
+\item{option}{is to check whether dyad is indistingusihable.}
 }
 \description{
 actor-partner interdependence model
