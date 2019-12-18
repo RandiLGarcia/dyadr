@@ -10,8 +10,8 @@
 #' @param conf confidence level (defaults to 95).
 #' @param dig number of decimal places (defaults to 6)
 #' @param seed seed value (defaults to 12345)
-#' @import MASS
-#'
+#' @importFrom MASS mvrnorm
+#' @importFrom stats quantile
 #' @details Base code taken from Selig and Preacher (2008).
 #' @export 
 #'

@@ -2,7 +2,7 @@
 #' @title Gives a Smaller Summary of gls and lme Objects
 #' 
 #' @param outp the lme or gls model object.
-#'
+#' @importFrom stats confint
 #' @details This function returns the random effects (lme only), Rho, error variances, fixed effects, and their confidence intervals.
 #' @export 
 #'

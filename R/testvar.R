@@ -9,7 +9,7 @@
 #' @param obs  the observation ID variable in quotes. This is a unique number for each dyad-measurement.
 #' @param dvv the distinguishing variable in quotes.
 #' @param ctrl an lmeControl object. Defaults to msMaxIter=10000, MaxIter=100000, msMaxEval=10000, returnObject=TRUE, niterEM=10000, nlmStepMax=1000.
-#'
+#' @importFrom stats pchisq
 #' @details Example call: testvar("AConflict","man,woman,MTime,WTime","man,woman,WTime,MTime",kashy_ppp,"DYADID","obsid", "GenderS").
 #' @export 
 #'

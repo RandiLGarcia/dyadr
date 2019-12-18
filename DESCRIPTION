@@ -19,7 +19,6 @@ RoxygenNote: 7.0.2
 Imports: 
     tibble,
     dplyr,
-    hablar,
     sjlabelled,
     nlme,
     MASS,

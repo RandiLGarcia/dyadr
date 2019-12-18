@@ -8,7 +8,7 @@
 #' @param v1 is the number of the first effect.
 #' @param v2 is the number of the second effect.
 #' @param fun is the comparison. Default fun = "D". Other options include "S" the sum, and "A" the average.
-#'
+#' @importFrom stats pnorm
 #' @details some additional details about these functions
 #' @export
 #'

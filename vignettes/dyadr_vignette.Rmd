@@ -63,9 +63,21 @@ crsp(esd,esd0)
 
 ```
 
+Using the `lincomb` function
 
+```{r}
+apimi = nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
+                    na.action=na.omit, 
+                    correlation=corCompSymm (form=~1|CoupleID),
+                    data=acipair)
+lincomb(apimi, 2, 3)
+```
 
+Using `variable_view` function
 
+```{r}
+variable_view(dyadic_trade)
+```
 
 
 

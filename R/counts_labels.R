@@ -5,7 +5,6 @@
 #' @param data a data.frame
 #' @param x a column in 'data'. Must be a string.
 #' @import dplyr
-#' @import hablar
 counts_labels <- function(data, x) {
   if(!is.data.frame(data)) {
     stop("data.frame expected.")

@@ -33,5 +33,19 @@ test_that("smallsummary returns output including Correlation", {
               data=acipair)
   expect_output(smallsummary(apimi), "Correlation")})
 
+test_that("counts_labels error works", {
+  expect_error(counts_labels(acipair, x = "SelfPos_P"), "'SelfPos_P' does not have value labels.")
+})
 
 
+test_that("lincomb works", {
+  apimi = nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
+                    na.action=na.omit, 
+                    correlation=corCompSymm (form=~1|CoupleID),
+                    data=acipair)
+  expect_length(lincomb(apimi, 2, 3), 3)
+})
+
+test_that("variable_view has correct length", {
+  expect_length(variable_view(dyadic_trade), 2)
+})
