@@ -19,8 +19,10 @@ purpose of comparing parameters to each other.
 
 # Installation
 
-    install.packages("devtools")
-    devtools::install_github("RandiLGarcia/dyadr")
+``` r
+# install.packages("devtools")
+devtools::install_github("RandiLGarcia/dyadr")
+```
 
 # Usage
 
@@ -31,16 +33,16 @@ First, load the package and get data:
 ``` r
 library(nlme)
 library(dyadr)
-data(acipair)
 ```
 
 Using the `smallsummary` function
 
 ``` r
-apim = gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
-                 na.action=na.omit, 
-                 correlation=corCompSymm (form=~1|CoupleID),
-                 data=acipair)
+apim <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+)
 
 smallsummary(apim)
 #> Correlation structure of class corCompSymm representing
@@ -63,16 +65,17 @@ Using the `crsp` function
 
 ``` r
 # Empty Model
-        apimie = summary(gls(Satisfaction_A ~ 1, 
-                     na.action=na.omit, 
-                     correlation=corCompSymm (form=~1|CoupleID),
-                     data=acipair))
+apimie <- summary(gls(Satisfaction_A ~ 1,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+))
 # sd of errors for the model or esd
-        esd = as.numeric(apim[6])
+esd <- as.numeric(apim[6])
 # sd of errors for the empty model or esd0
-                esd0 = as.numeric(apimie[6])
-# the R squared, using the crsp function                
-        crsp (esd,esd0)
+esd0 <- as.numeric(apimie[6])
+# the R squared, using the crsp function
+crsp(esd, esd0)
 #> [1] 0.3348468
 ```
 
