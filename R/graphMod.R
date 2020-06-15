@@ -11,13 +11,13 @@
 #' @param slp coefficient position of the slope of x.
 #' @param hlab text label for "high" level of moderator.
 #' @param llab text label for "low" level of moderator.
-#'
+#' @import dplyr
+#' @import ggplot2
+#' 
 #' @details This is function only works for numerical-numerical interactions. It returns a ggplot object.
 #' @export 
 #'
 graphMod <- function(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High", llab = "Low"){
-  require(dplyr)
-  require(ggplot2)
   
   d <- data %>%
     mutate(mod = mod, xvar = x, yvar = y) %>%
@@ -50,3 +50,5 @@ graphMod <- function(data, x, y, mod, highMod, lowMod, int, slp, hlab = "High", 
   
   return(plot)
 }
+
+globalVariables(c("xvar","yvar","coef","ModSplit","intercept","slope"))

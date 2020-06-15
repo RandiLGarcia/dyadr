@@ -6,8 +6,12 @@
 #' even more stuff about the apim
 #'
 #' @param x is a function with form y ~ x.
-#'
+#' @param dat is the dataframe.
+#' @param dyadid is a dyadic variable.
+#' @param option is to check whether dyad is indistingusihable.
+#' 
 #' @details some additional details about these functions
+#' @import lazyeval
 
 #' @export
 apim <- function(x, dat, dyadid, option = "indistinguishable"){
@@ -25,3 +29,5 @@ apim <- function(x, dat, dyadid, option = "indistinguishable"){
     }
   
 }
+
+globalVariables(c("gls","na.omit", "corCompSymm"))

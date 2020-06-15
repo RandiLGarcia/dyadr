@@ -12,6 +12,8 @@ crsp(esdmod, esdemod, indistinguishable = TRUE)
 \item{esdmod}{is error standard deviation of the model of interest.}
 
 \item{esdemod}{is error standard deviation of the empty model.}
+
+\item{indistinguishable}{is to check whether the dyad is indistinguishable or not.}
 }
 \description{
 Multiple Pseudo R-squared

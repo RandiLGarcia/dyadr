@@ -6,6 +6,8 @@
 #'
 #' @param outp is the model object.  Not it is not the "summary" of that object.
 #' @param tipe is the type of model object.  It defaults to "gls."  The other option is "lme."
+#' @param grp1 is the group 1 of the model object. For instance, grp1 is male.
+#' @param grp2 is the group 2 of the model object. For instance, grp2 is female.
 #'
 #' @details some additional details about these functions
 #' @export

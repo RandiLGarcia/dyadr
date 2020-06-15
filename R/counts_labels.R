@@ -10,11 +10,11 @@ counts_labels <- function(data, x) {
     stop("data.frame expected.")
   }
   if(is.factor(data[[x]])) {
-    data[[x]] <- hablar::convert_num(data[[x]])
+    data[[x]] <- as.numeric(data[[x]])
     cat("Factor converted to numeric.")
   }
   if(is.character(data[[x]])) {
-    data[[x]] <- hablar::convert_num(data[[x]])
+    data[[x]] <- as.numeric(data[[x]])
     cat("Factor converted to numeric.")
   }
   if(is.null(sjlabelled::get_labels(data[[x]]))) {
@@ -22,7 +22,7 @@ counts_labels <- function(data, x) {
   }
   dims <- dim(data)
   counts <- data %>%
-    dplyr::select_(x) %>%
+    select_(x) %>%
     group_by_(x) %>%
     count_()
   labels <- tibble::tibble(value_labels = 
@@ -38,3 +38,5 @@ counts_labels <- function(data, x) {
     mutate(percent = round((n / dims[[1]]) * 100))
   return(x_bins)
 }
+
+globalVariables(c("get_labels","rownames_to_column"))
