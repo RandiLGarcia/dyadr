@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
-
 ```
 
 
@@ -24,52 +23,50 @@ Here is an example of how to use some of the `dyadr` functions.
 ```{r}
 library(nlme)
 library(dyadr)
-
 ```
 
 Using the `apim` function
 ```{r}
 apim("x")
-
 ```
 
 Using the `smallsummary` function
 
 ```{r}
-apimi = gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
-                 na.action=na.omit, 
-                 correlation=corCompSymm (form=~1|CoupleID),
-                 data=acipair)
+apimi <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+)
 
 smallsummary(apimi)
-
-
 ```
 
 Using the `crsp` function
 
 ```{r}
 # Empty Model
-apimie = summary(gls(Satisfaction_A ~ 1, 
-                     na.action=na.omit, 
-                     correlation=corCompSymm (form=~1|CoupleID),
-                     data=acipair))
+apimie <- summary(gls(Satisfaction_A ~ 1,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+))
 # sd of errors for the model or esd
-esd = as.numeric(apimi[6])
+esd <- as.numeric(apimi[6])
 # sd of errors for the empty model or esd0
-esd0 = as.numeric(apimie[6])
-# the R squared, using the crsp function                
-crsp(esd,esd0)
-
+esd0 <- as.numeric(apimie[6])
+# the R squared, using the crsp function
+crsp(esd, esd0)
 ```
 
 Using the `lincomb` function
 
 ```{r}
-apimi = nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
-                    na.action=na.omit, 
-                    correlation=corCompSymm (form=~1|CoupleID),
-                    data=acipair)
+apimi <- nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+)
 lincomb(apimi, 2, 3)
 ```
 

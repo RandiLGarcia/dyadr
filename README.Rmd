@@ -23,8 +23,8 @@ r package for dyadic data analysis
 An R package for assisting people in dyadic data analysis. Contains functions to organize output from the `gls` and `lme` functions from the `nlme` package for cross-sectional data. Some functionality exists with the `lme4` package. Improves user understanding of the Actor-Partner Independence Model by organizing actor and parter effects for the purpose of comparing parameters to each other. 
 
 # Installation
-```
-install.packages("devtools")
+```{r, eval=FALSE}
+# install.packages("devtools")
 devtools::install_github("RandiLGarcia/dyadr")
 ```
 
@@ -36,16 +36,16 @@ First, load the package and get data:
 ```{r, warning = FALSE}
 library(nlme)
 library(dyadr)
-data(acipair)
 ```
 
 Using the `smallsummary` function
 
 ```{r}
-apim = gls(Satisfaction_A ~ Tension_A + SelfPos_P, 
-                 na.action=na.omit, 
-                 correlation=corCompSymm (form=~1|CoupleID),
-                 data=acipair)
+apim <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+)
 
 smallsummary(apim)
 ```
@@ -54,16 +54,17 @@ Using the `crsp` function
 
 ```{r}
 # Empty Model
-        apimie = summary(gls(Satisfaction_A ~ 1, 
-                     na.action=na.omit, 
-                     correlation=corCompSymm (form=~1|CoupleID),
-                     data=acipair))
+apimie <- summary(gls(Satisfaction_A ~ 1,
+  na.action = na.omit,
+  correlation = corCompSymm(form = ~ 1 | CoupleID),
+  data = acipair
+))
 # sd of errors for the model or esd
-        esd = as.numeric(apim[6])
+esd <- as.numeric(apim[6])
 # sd of errors for the empty model or esd0
-                esd0 = as.numeric(apimie[6])
-# the R squared, using the crsp function                
-        crsp (esd,esd0)
+esd0 <- as.numeric(apimie[6])
+# the R squared, using the crsp function
+crsp(esd, esd0)
 ```
 
 # Contributing
