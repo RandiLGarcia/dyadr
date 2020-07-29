@@ -31,12 +31,14 @@ test_that("crsp output returns correct value", {
 })
 
 test_that("smallsummary returns output including Correlation", {
-  apimi <- nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P,
-    na.action = na.omit,
-    correlation = corCompSymm(form = ~ 1 | CoupleID),
-    data = acipair
-  )
-  expect_output(smallsummary(apimi), "Correlation")
+  if (require(nlme)) {
+    apimi <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
+                 na.action = na.omit,
+                 correlation = corCompSymm(form = ~ 1 | CoupleID),
+                 data = acipair
+    )
+    expect_output(smallsummary(apimi), "Correlation")
+  }
 })
 
 test_that("counts_labels error works", {
@@ -45,12 +47,14 @@ test_that("counts_labels error works", {
 
 
 test_that("lincomb works", {
-  apimi <- nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P,
-    na.action = na.omit,
-    correlation = corCompSymm(form = ~ 1 | CoupleID),
-    data = acipair
-  )
-  expect_length(lincomb(apimi, 2, 3), 3)
+  if (require(nlme)) {
+    apimi <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
+                 na.action = na.omit,
+                 correlation = corCompSymm(form = ~ 1 | CoupleID),
+                 data = acipair
+    )
+    expect_length(lincomb(apimi, 2, 3), 3)
+  }
 })
 
 test_that("variable_view has correct length", {
