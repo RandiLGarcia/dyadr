@@ -5,7 +5,7 @@
 \alias{acipair}
 \title{Acitelli Data}
 \format{
-An object of class \code{"cross"}; see \code{\link[qtl]{read.cross}}.
+An object of class \code{cross}
 }
 \usage{
 data(acipair)
@@ -15,5 +15,8 @@ Data from 148 heterosexual married couples in Detroit
 }
 \examples{
 str(acipair)
+}
+\seealso{
+\code{\link[qtl]{read.cross}}
 }
 \keyword{datasets}
