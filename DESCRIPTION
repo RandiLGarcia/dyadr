@@ -1,6 +1,6 @@
 Package: dyadr
 Title: dyadr: Dyadic Data Analysis
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: c(
   person("Randi", "Garcia", email = "rgarcia@smith.edu", role=(c("aut", "cre"))),
   person("David", "Kenny", email = "david.kenny@uconn.edu", role = "aut"),
@@ -8,7 +8,9 @@ Authors@R: c(
   person("Emma", "Livingston", email = "livingston.emma73@gmail.com", role = "ctb"),
   person("Sifan", "Liu", email = "cliu13@smith.edu", role = "ctb"),
   person("Alina", "Barylsky", email = "abarylsky@gmail.com", role = "ctb"),
-  person("Jane", "Bang", email = "carolbjy@gmail.com", role = "ctb"))
+  person("Jane", "Bang", email = "carolbjy@gmail.com", role = "ctb"),
+  person("Benjamin S.", "Baumer", role = "ctb")
+  )
 Description: This package provides helper functions for dyadic data analysis.
 Depends:
     R (>= 3.2.3)
