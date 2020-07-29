@@ -26,6 +26,11 @@ testvar(ovar, xx, yy, dset, DID, obs, dvv, ctrl = defaultctrl)
 \description{
 Test the variance of a random effect
 }
-\details{
-Example call: testvar("AConflict","man,woman,MTime,WTime","man,woman,WTime,MTime",kashy_ppp,"DYADID","obsid", "GenderS").
+\examples{
+\dontrun{
+testvar(
+  "AConflict", "man,woman,MTime,WTime",
+  "man,woman,WTime,MTime", "kashy_ppp", "DYADID", "obsid", "GenderS"
+)
+}
 }

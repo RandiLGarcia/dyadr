@@ -4,7 +4,7 @@
 \alias{apim}
 \title{actor-partner interdependence model
 
-will run the apim on indistinguishable dyads eventualy 
+will run the apim on indistinguishable dyads eventualy
 
 even more stuff about the apim}
 \usage{
@@ -22,7 +22,7 @@ apim(x, dat, dyadid, option = "indistinguishable")
 \description{
 actor-partner interdependence model
 
-will run the apim on indistinguishable dyads eventualy 
+will run the apim on indistinguishable dyads eventualy
 
 even more stuff about the apim
 }

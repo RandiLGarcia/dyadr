@@ -1,5 +1,5 @@
 ---
-title: "dyadr_vignette"
+title: "Dyadic data analysis with `dyadr`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{dyadr_vignette}
@@ -25,12 +25,12 @@ library(nlme)
 library(dyadr)
 ```
 
-Using the `apim` function
+Using the `apim()` function
 ```{r}
 apim("x")
 ```
 
-Using the `smallsummary` function
+Using the `smallsummary()` function
 
 ```{r}
 apimi <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
@@ -42,7 +42,7 @@ apimi <- gls(Satisfaction_A ~ Tension_A + SelfPos_P,
 smallsummary(apimi)
 ```
 
-Using the `crsp` function
+Using the `crsp()` function
 
 ```{r}
 # Empty Model
@@ -59,7 +59,7 @@ esd0 <- as.numeric(apimie[6])
 crsp(esd, esd0)
 ```
 
-Using the `lincomb` function
+Using the `lincomb()` function
 
 ```{r}
 apimi <- nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P,
@@ -70,7 +70,7 @@ apimi <- nlme::gls(Satisfaction_A ~ Tension_A + SelfPos_P,
 lincomb(apimi, 2, 3)
 ```
 
-Using `variable_view` function
+Using `variable_view()` function
 
 ```{r}
 variable_view(dyadic_trade)
