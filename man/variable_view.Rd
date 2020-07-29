@@ -12,6 +12,6 @@ variable_view(data)
 \description{
 Variable names with labels like in SPSS
 }
-\details{
-Example call: variable_view(acipair)
+\examples{
+variable_view(acipair)
 }

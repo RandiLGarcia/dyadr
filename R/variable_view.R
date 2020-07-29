@@ -3,7 +3,8 @@
 #'
 #' @param data the lme model object.
 #'
-#' @details Example call: variable_view(acipair)
+#' @examples
+#' variable_view(acipair)
 #' @export
 #'
 variable_view <- function(data) {
