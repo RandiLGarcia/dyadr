@@ -4,10 +4,13 @@
 #' @param outp the lme model object.
 #' @param p string variable that you want to test the random variance component for.
 #' @param ctrl an lmeControl object. Defaults to msMaxIter=10000, MaxIter=100000, msMaxEval=10000, returnObject=TRUE, niterEM=10000, nlmStepMax=1000.
-#' @import stringr
+#' @importFrom stringr str_locate str_remove str_remove_all str_c str_detect str_split
 #' @importFrom stats as.formula formula logLik pchisq
 #' @importFrom stringi stri_length
-#' @details LRtestvar(dyadGC_full, "MTime")
+#' @examples 
+#' \dontrun{
+#' LRtestvar(dyadGC_full, "MTime")
+#' }
 #' @export
 #'
 LRtestvar <- function(outp, p, ctrl = defaultctrl) {
@@ -102,4 +105,4 @@ LRtestvar <- function(outp, p, ctrl = defaultctrl) {
   ))
 }
 
-globalVariables(c("lmeControl", "pdBlocked", "varIdent", "stri_length"))
+globalVariables(c("lmeControl", "pdBlocked", "varIdent"))
