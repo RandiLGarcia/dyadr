@@ -4,7 +4,9 @@
 #' @title var_labels
 #' @param data a data.frame
 #' @examples 
+#' \dontrun{
 #' var_labels(acipair)
+#' }
 var_labels <- function(data) {
   if (!is.data.frame(data)) {
     stop("data.frame expected.")
