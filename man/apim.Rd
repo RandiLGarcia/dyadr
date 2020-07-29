@@ -11,7 +11,7 @@ even more stuff about the apim}
 apim(x, dat, dyadid, option = "indistinguishable")
 }
 \arguments{
-\item{x}{is a function with form y ~ x.}
+\item{x}{is a function with form \code{y ~ x}.}
 
 \item{dat}{is the dataframe.}
 

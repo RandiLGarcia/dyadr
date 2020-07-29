@@ -19,17 +19,16 @@ RoxygenNote: 7.1.1
 Imports: 
     tibble,
     dplyr,
-    sjlabelled,
     nlme,
     MASS,
+    rlang,
+    sjlabelled,
     stringr,
     stringi,
-    stats,
-    ggplot2,
-    lazyeval,
-    qtl
+    stats
 Suggests: 
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    qtl
 VignetteBuilder: knitr
