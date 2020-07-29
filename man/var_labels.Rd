@@ -13,3 +13,8 @@ var_labels(data)
 Creates a `tbl_df` that contains the column names and variable labels to
 easily explore the data.
 }
+\examples{
+\dontrun{
+var_labels(acipair)
+}
+}

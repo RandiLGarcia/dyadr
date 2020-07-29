@@ -1,6 +1,6 @@
 #' @name mmc
 #' @title Monte Carlo confidence interval for indirect effects
-#' 
+#'
 #' @param a path from X to M.
 #' @param b path from M to Y.
 #' @param ase standard error for path a.
@@ -13,32 +13,29 @@
 #' @importFrom MASS mvrnorm
 #' @importFrom stats quantile
 #' @details Base code taken from Selig and Preacher (2008).
-#' @export 
+#' @export
 #'
-mmc<-function(a,b,ase,bse,cov = 0,rep = 40000,conf = 95, dig = 6, seed=12345) {
-  
-  
-  pest <- c(a,b)
-  
-  acov <- matrix(c(ase^2,cov,cov,bse^2),2,2)
+mmc <- function(a, b, ase, bse, cov = 0, rep = 40000, conf = 95, dig = 6, seed = 12345) {
+  pest <- c(a, b)
+
+  acov <- matrix(c(ase^2, cov, cov, bse^2), 2, 2)
   set.seed(seed)
-  mcmc <- mvrnorm(rep,pest,acov,empirical=FALSE)
-  
-  
-  ab <- mcmc[,1]*mcmc[,2]
-  
-  cc=0
-  for (ii in 1: rep) if (ab[ii] > 0) cc = cc + 1/rep
-  
-  low <- (1-conf/100)/2
-  upp <- ((1-conf/100)/2)+(conf/100)
-  
-  LB <- format(quantile(ab,low),digits=dig)
-  UB <- format(quantile(ab,upp),digits=dig)
-  p_value = 1-2*abs(.5- cc)
-  
+  mcmc <- mvrnorm(rep, pest, acov, empirical = FALSE)
+
+
+  ab <- mcmc[, 1] * mcmc[, 2]
+
+  cc <- 0
+  for (ii in 1:rep) if (ab[ii] > 0) cc <- cc + 1 / rep
+
+  low <- (1 - conf / 100) / 2
+  upp <- ((1 - conf / 100) / 2) + (conf / 100)
+
+  LB <- format(quantile(ab, low), digits = dig)
+  UB <- format(quantile(ab, upp), digits = dig)
+  p_value <- 1 - 2 * abs(.5 - cc)
+
   CI <- cbind.data.frame(LB, UB, p_value)
-  rownames(CI)=paste0(low," to ",upp)
+  rownames(CI) <- paste0(low, " to ", upp)
   return(CI)
-  
 }

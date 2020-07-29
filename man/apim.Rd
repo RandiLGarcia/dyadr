@@ -4,14 +4,14 @@
 \alias{apim}
 \title{actor-partner interdependence model
 
-will run the apim on indistinguishable dyads eventualy 
+will run the apim on indistinguishable dyads eventualy
 
 even more stuff about the apim}
 \usage{
 apim(x, dat, dyadid, option = "indistinguishable")
 }
 \arguments{
-\item{x}{is a function with form y ~ x.}
+\item{x}{is a function with form \code{y ~ x}.}
 
 \item{dat}{is the dataframe.}
 
@@ -22,7 +22,7 @@ apim(x, dat, dyadid, option = "indistinguishable")
 \description{
 actor-partner interdependence model
 
-will run the apim on indistinguishable dyads eventualy 
+will run the apim on indistinguishable dyads eventualy
 
 even more stuff about the apim
 }

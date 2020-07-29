@@ -17,10 +17,10 @@ knitr::opts_chunk$set(
 [![Travis-CI Build Status](https://api.travis-ci.org/abarylsky/dyadr.svg?branch=master)](https://travis-ci.org/abarylsky/dyadr)
 
 
-r package for dyadic data analysis
+R package for dyadic data analysis
 
 # Description
-An R package for assisting people in dyadic data analysis. Contains functions to organize output from the `gls` and `lme` functions from the `nlme` package for cross-sectional data. Some functionality exists with the `lme4` package. Improves user understanding of the Actor-Partner Independence Model by organizing actor and parter effects for the purpose of comparing parameters to each other. 
+An R package for assisting people in dyadic data analysis. Contains functions to organize output from the `gls` and `lme` functions from the `nlme` package for cross-sectional data. Some functionality exists with the `lme4` package. Improves user understanding of the Actor-Partner Independence Model by organizing actor and partner effects for the purpose of comparing parameters to each other. 
 
 # Installation
 ```{r, eval=FALSE}

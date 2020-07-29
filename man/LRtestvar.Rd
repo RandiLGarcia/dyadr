@@ -16,6 +16,8 @@ LRtestvar(outp, p, ctrl = defaultctrl)
 \description{
 Test the variance of a random effect
 }
-\details{
+\examples{
+\dontrun{
 LRtestvar(dyadGC_full, "MTime")
+}
 }
