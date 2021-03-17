@@ -4,7 +4,8 @@
 \name{alliance}
 \alias{alliance}
 \title{Alliance Data}
-\format{A data frame with 3252 rows and 18 variables:
+\format{
+A data frame with 3252 rows and 18 variables:
 \describe{
 \item{version4id}{the unique serial identification number for each alliance}
 \item{ccode1}{the Correlates of War System Membership number of the state initiating alliance terms toward ccode2}
@@ -24,7 +25,8 @@
 \item{nonaggression}{coded as (1) if ccode1 promised not to attack ccode2}
 \item{entente}{coded as (1) if ccode1 agreed to consult with ccode2 if a crisis occurred}
 \item{version}{version number of the data set (4.x)}
-}}
+}
+}
 \usage{
 data(alliance)
 }

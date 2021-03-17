@@ -4,7 +4,8 @@
 \name{dyadic_trade}
 \alias{dyadic_trade}
 \title{Dyadic Trade Data}
-\format{A data frame with 540,507 rows and 9 variables:
+\format{
+A data frame with 540,507 rows and 9 variables:
 \describe{
   \item{ccode1}{Correlates of War Country Code for State A}
   \item{ccode2}{Correlates of War Country Code for State B}
@@ -15,7 +16,8 @@
   \item{flow2}{Imports of Country B from Country A in current US millions of dollars}
   \item{source1}{Source of data for flow1 variable (see table below)}
   \item{source2}{Source of data for flow2 variable (see table below)}
-}}
+}
+}
 \usage{
 data(dyadic_trade)
 }

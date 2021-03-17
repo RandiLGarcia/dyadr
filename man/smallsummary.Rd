@@ -13,5 +13,6 @@ smallsummary(outp)
 Gives a Smaller Summary of gls and lme Objects
 }
 \details{
-This function returns the random effects (lme only), Rho, error variances, fixed effects, and their confidence intervals.
+This function returns the random effects (lme only), Rho, error variances, 
+fixed effects, and their confidence intervals. It works for lme objects only.
 }
