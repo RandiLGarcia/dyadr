@@ -12,6 +12,10 @@ getevd(outp, tipe = "gls", grp1 = "Group 1", grp2 = "Group 2")
 \item{outp}{is the model object.  Not it is not the "summary" of that object.}
 
 \item{tipe}{is the type of model object.  It defaults to "gls."  The other option is "lme."}
+
+\item{grp1}{is the group 1 of the model object. For instance, grp1 is male.}
+
+\item{grp2}{is the group 2 of the model object. For instance, grp2 is female.}
 }
 \description{
 Error standard deviation for distinguishable dyads

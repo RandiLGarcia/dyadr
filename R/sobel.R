@@ -8,7 +8,7 @@
 #' @param b path from M to Y.
 #' @param ase standard error for path a.
 #' @param bse standard error for path b.
-#'
+#' @importFrom stats pnorm
 #' @details The Sobel method is conservative. Use the mmc function, or bootstrapping if marginal. The Sobel test also presumes a and b are uncorrelated. 
 #' @export 
 #'

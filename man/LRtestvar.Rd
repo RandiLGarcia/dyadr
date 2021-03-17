@@ -17,5 +17,5 @@ LRtestvar(outp, p, ctrl = defaultctrl)
 Test the variance of a random effect
 }
 \details{
-Example call: LRtestvar(dyadGC_full, "MTime").
+LRtestvar(dyadGC_full, "MTime")
 }

@@ -12,6 +12,12 @@ apim(x, dat, dyadid, option = "indistinguishable")
 }
 \arguments{
 \item{x}{is a function with form y ~ x.}
+
+\item{dat}{is the dataframe.}
+
+\item{dyadid}{is a dyadic variable.}
+
+\item{option}{is to check whether dyad is indistingusihable.}
 }
 \description{
 actor-partner interdependence model
